@@ -1,1 +1,0 @@
-github : https://github.com/nirmov/svivot_ServerSide
