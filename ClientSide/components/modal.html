@@ -1,0 +1,38 @@
+<div class="modal-header">
+    <h3 class="modal-title">{{poi.name}} , {{poi.category}}</h3>
+    <div  id="FavoriteModal">
+    <a> <img ng-click="addFavorite(poi.ID)"  ng-if="$root.connect && !isFavorite(poi.ID)"  ng-style="{'height': '70'}"  ng-src="pictures\Fav_noBack.png">  </a>
+    <a> <img ng-click="addFavorite(poi.ID)"  ng-if="$root.connect && isFavorite(poi.ID)"  ng-style="{'height': '70'}"  ng-src="pictures\favorite.png">  </a>
+    </div>
+</div>
+<div class="modal-body">
+    <img ng-style="{'height': '200px'}" ng-src="{{poi.image}}">
+    <div id="UserOnline" ng-if="$root.connect" >
+        Rank Ur stay :
+        <input type="number" ng-model="rank_input" ng-change="rankChanged(rank_input)"  max="5" min="0">
+        <br>
+        Give a review for  Ur stay :
+        <br>
+        <textarea id="Review" ng-model="review_input" ng-change="reviewChanged(review_input)" type="text"></textarea>
+    </div>
+    <div id="reviews">
+    <div  ng-repeat="review in reviews">
+        Review : {{review.review}}
+
+        <br>
+        Username : {{review.username}} Date : {{review.date}}
+
+    </div>
+    </div>
+    <br>
+    Rank : {{(poi.rank/5)*100| number:0}}%
+    Views : {{poi.views}}
+    <br>
+    Discription :
+    {{poi.discription}}
+
+</div>
+<div class="modal-body">
+    <button class="btn btn-warning" ng-click="close()">Close</button>
+    <button class="btn btn-success pull-right" ng-if="$root.connect" ng-click="Submit()">submit</button>
+</div>

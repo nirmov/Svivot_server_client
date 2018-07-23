@@ -1,0 +1,18 @@
+
+<div id ="login" ng-init="initiate()" >
+<div class="login-card">
+    <h1>Log-in</h1><br>
+    <form >
+        <input ng-model="userName" type="text" name="user" placeholder="Username">
+        <input ng-model="password" type="password" name="pass" placeholder="Password">
+        <button ng-click="submit($event)" class="login login-submit" type="submit">login</button>
+    </form>
+
+    <div class="login-help">
+        <a href="#/register">Register</a> • <a href="#/password">Forgot Password</a>
+        <br>
+        <a id="statuslo"> {{statusLog}}</a>
+    </div>
+</div>
+</div>
+</div>

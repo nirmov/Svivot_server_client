@@ -1,0 +1,58 @@
+
+<div id="register_div" ng-init="initiate()">
+    <center>
+        <form name="registrationForm" ng-submit="submit($event)" name="myForm">
+
+            <label id="formLable" >Registration form:</label>
+            </br>
+            </br>
+            </br>
+            <label for userName id="l_userName" >User Name:</label>
+            <input type="text" id="userName"  name="userName" ng-model="regCtrl.user.userName" required minlength="3" maxlength="8" pattern="^[a-zA-Z]+$" title="please fill only letters">
+            <label for firstName id="l_firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" ng-model="regCtrl.user.firstName" required pattern="^[a-zA-Z]+$" title="please fill only letters" >
+            </br>
+            </br>
+            <label for lastName id="l_lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" ng-model="regCtrl.user.lastName" required pattern="^[a-zA-Z]+$" title="please fill only letters">
+            <label for password id="l_password">Password:</label>
+            <input type="password" id="password1" name="password" ng-model="regCtrl.user.userPassword" requierd pattern="[a-zA-Z0-9-]+" minlength="5" , maxlength="10"  ng-trim="false"required title="please fill only letters or numbers">
+            </br>
+            </br>
+            <label for city id="l_city">City:</label>
+            <input type="text" id="city" name="city" ng-model="regCtrl.user.city" required pattern="^[a-zA-Z]+$" >
+
+            <label for country id="l_country">Country:</label>
+            <select id="count" ng-model="regCtrl.user.country" ng-options="c for c in countries">
+            </select>
+            </br>
+            </br>
+            <label for email id="l_email">Email:</label>
+            <input type="email" id="email" name="email" ng-model="regCtrl.user.email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+            </br>
+            </br>
+            <label for email id="l_categories">Categories:</label>
+            <input type="checkbox" ng-click=choosCat('Museum') ng-model="regCtrl.user.categories.museum"  name="Museum" value="Museum">Museum
+            <input type="checkbox" ng-click=choosCat('Resturant') ng-model="regCtrl.user.categories.resturant" name="Resturant" value="Resturant">Resturant
+            <input type="checkbox" ng-click=choosCat('Market') ng-model="regCtrl.user.categories.market"  name="Market" value="Market">Market
+            <input type="checkbox" ng-click=choosCat('Night-life') ng-model="regCtrl.user.categories.night_life"  name="Night-life" value="Night-life">Night-life
+            </br>
+            </br>
+            <label for Q1 id="l_Q1">Verification Question 1 :</label>
+            <input type="text" id="Q1" name="Q1" ng-model="regCtrl.user.verifyQuestion1" required >
+            <label for A1 id="l_A1"> Answer:</label>
+            <input type="text" id="A1" name="A1" ng-model="regCtrl.user.verifyAnswer1" required  >
+            </br>
+            </br>
+            <label for Q2 id="l_Q2">Verification Question 2 :</label>
+            <input type="text" id="Q2" name="Q2" ng-model="regCtrl.user.verifyQuestion2" required >
+            <label for A2 id="l_A2"> Answer:</label>
+            <input type="text" id="A2" name="A2" ng-model="regCtrl.user.verifyAnswer2" required  >
+            </br>
+            </br>
+            <input type="submit" id=submit value="Register" ng-disabled="myForm.$invalid">
+
+        </form>
+    </center>
+
+</div>

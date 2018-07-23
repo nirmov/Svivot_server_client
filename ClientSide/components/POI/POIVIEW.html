@@ -1,0 +1,39 @@
+
+<div >
+    <div>
+        <a> Filter By Category :</a>
+        <select  ng-options="item.name as item.name for item in categories" ng-model="selectedCategory" ng-change="catChanged(selectedCategory)"></select>
+
+         <button class="b_class" ng-click="submit($event)"  type="submit">Sort By Rank</button>
+        <a>You have {{$root.favorites.length}} POIs in your favorite</a>
+        <a href="#/favoritesPOI"> <img   ng-if="$root.connect"  ng-style="{'height': '70'}"  ng-src="pictures\favoriteIcon.png">  </a>
+
+
+</div>
+
+<div ng-init="initiate()" class="panel panel-default">
+    <div class="panel-body">
+        <div class="row">
+            <div    ng-repeat="item in pois">
+                <div ng-if="item.category==cat || !cat">
+                <div class="col-sm-4">
+                    <center>
+                <div> <a ng-click="editText(item.ID)">{{item.name}}  , {{item.category}}</a> </div>
+
+
+                    <a> <img ng-click="addFavorite(item.ID)"  ng-if="$root.connect && !isFavorite(item.ID)"  ng-style="{'height': '60'}"  ng-src="pictures\Fav_noBack.png">  </a>
+                    <a> <img ng-click="addFavorite(item.ID)"  ng-if="$root.connect && isFavorite(item.ID)"  ng-style="{'height': '60'}"  ng-src="pictures\favorite.png">  </a>
+
+                 <img  ng-style="{'height': '120'}"  ng-src="{{item.picture}}">
+                    </center>
+                    <center>
+                <br>
+                Views:  {{item.views}}
+                Rank : {{(item.rank/5)*100| number:0}}%
+                </center>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

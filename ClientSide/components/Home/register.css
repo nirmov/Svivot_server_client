@@ -1,0 +1,99 @@
+#register_div{
+    position: absolute;
+    top: 12%;
+    left: 22%;
+}
+#l_userName, #l_firstName,#l_categories, #l_lastName,#l_country, #l_password, #l_city, #l_email, #l_Q1, #l_A1, #l_A2, #l_Q2{
+    font-size:17px;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: bold;
+}
+.errorMsg {
+    color: red;
+}
+
+#formLable{
+    font-size:40px;
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+    -webkit-text-stroke-width: 2px;
+    content: "\A";
+    white-space: pre;
+
+}
+#userName, #firstName, #lastName, #password1, #city, #A1, #A2,#count{
+    border: none;
+    width: 25%;
+    line-height: 1.5%;
+    height: 15%;
+    color:black;
+    text-align: center;
+    text-decoration:black;
+    border: 2px solid black;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: 'Permanent Marker', cursive;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#Q1, #Q2,#email{
+    border: none;
+    line-height: 1.5%;
+    width: 33%;
+    height: 15%;
+    color:black;
+    text-align: center;
+    text-decoration:black;
+    border: 2px solid black;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: 'Permanent Marker', cursive;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#submit
+{
+    border: none;
+    color:black;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration:black;
+    border: 2px solid black;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: 'Permanent Marker', cursive;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#userHello {
+    position: absolute;
+    left: 85%;
+}
+#UserOnline
+{
+    position: absolute;
+    top: 10%;
+    left: 46%;
+}
+#Review
+{
+    width: 200%;
+    height: 60%;
+}
+#reviews
+{
+    position: absolute;
+    top: 50%;
+    left: 46%;
+}
+#FavoriteModal
+{
+    position: absolute;
+    left: 87%;
+    top: 3%;
+}

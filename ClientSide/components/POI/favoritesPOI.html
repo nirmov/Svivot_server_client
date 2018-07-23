@@ -1,0 +1,33 @@
+<div>
+    <div>
+        <a> Filter By Category :</a>
+        <select  ng-options="item.name as item.name for item in categories" ng-model="selectedCategory" ng-change="catChanged(selectedCategory)"></select>
+        <button class="b_class" ng-click="sortByRank()"  type="submit">Sort By Rank</button>
+        <button class="b_class" ng-click="sortByUser($event)"  type="submit">Sort By User</button>
+        {{sortDetail}}
+        <button class="b_class" ng-click="saveToFavorites()"  type="submit">Save Favorites</button>
+    </div>
+
+</div>
+<div ng-init="initiate()" class="panel panel-default">
+    <div class="panel-body">
+        <div class="row">
+            <div    ng-repeat="item in favoritesPoi">
+                <div ng-if="item.category==cat || !cat">
+                    <div class="col-sm-4">
+                        <div> <a ng-click="editText(item.ID)">{{item.name}}  , {{item.category}}</a> </div>
+                        <img  ng-style="{'height': '120'}"  ng-src="{{item.picture}}">
+                        <a> Sort Position:</a>
+                        <input type="number"  id="UserSort" name="A1" ng-model="position" ng-change="changedInput(item.ID,position)"  >
+                        <a><button class="b_class" ng-click="removeFromFavorites(item.ID)">Remove From Favorites</button> </a>
+                        <center>
+                            <br>
+                            Views:  {{item.views}}
+                            Rank : {{(item.rank/5)*100| number:0}}%
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

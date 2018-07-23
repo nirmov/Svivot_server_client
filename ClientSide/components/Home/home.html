@@ -1,0 +1,71 @@
+<div ng-init="initiate()" ng-if="!$root.connect" id="hello_div">
+    <div  >
+        <center>
+
+        <p id="welcome">Welcome To Our City's App</p>
+            <br>
+        <button  ng-click="goToReg_func()" class="b_class">Register</button>
+        <button ng-if="!$root.connect" ng-click="goToLogin_func()" class="b_class">Log-In</button>
+        </center>
+    </div>
+<div id="explore">
+    <br>
+
+    <table id="tableWelcome">
+        <tr>
+         <td   ng-repeat="poi in POIs">
+             <center>
+             <a ng-click="editText(poi.ID)"> {{poi.name}} </a>
+             <br>
+             <br>
+             <img ng-style="{'height': '210px'}"  ng-src="{{poi.picture}}">
+             <br>
+                 <br>
+             <a> Rank:  {{poi.rank}} </a>
+             <a>  Views:  {{poi.views}}</a>
+             </center>
+         </td>
+        </tr>
+    </table>
+    </div>
+</div>
+<div ng-init="initiateConnected()" ng-if="$root.connect" id="homeConnected">
+    <p id="CategoriesHeader">  Popular POI from 2 Different Categories</p>
+        <table id="tableCategory">
+
+            <tr>
+                <td  ng-repeat="poi in poiCategory">
+                    <center>
+                        <a ng-click="editText(poi.ID)"> {{poi.name}} </a>
+                        <br>
+                        <br>
+                        <img ng-style="{'height': '210px'}"  ng-src="{{poi.picture}}">
+                        <br>
+                        <br>
+                        <a> Rank:  {{(poi.rank/5)*100| number:0}}% </a>
+                        <a>  Views:  {{poi.views}}</a>
+                        <br>
+                        <a> category:  {{poi.category}} </a>
+                    </center>
+                </td>
+            </tr>
+        </table>
+        <p id="favoriteHeader">  Last Saved Favorite Poi</p>
+        <table id="favoriteTabel">
+            <tr>
+                <td ng-repeat="poi in poiLastUpload">
+                    <center>
+                        <a ng-click="editText(poi.ID)"> {{poi.name}} </a>
+                        <br>
+                        <br>
+                        <img ng-style="{'height': '210px'}"  ng-src="{{poi.picture}}">
+                        <br>
+                        <br>
+                        <a ng-if="poi.rank != null" >  Rank:  {{(poi.rank/5)*100| number:0}}% </a>
+                        <a ng-if="poi.rank != null" >  Views:  {{poi.views}}</a>
+                    </center>
+                </td>
+            </tr>
+        </table>
+
+</div>

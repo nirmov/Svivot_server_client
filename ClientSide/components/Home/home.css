@@ -1,0 +1,67 @@
+.b_class{
+    background-color: lightblue; /* Green */
+    border: none;
+    color:black;
+    padding: 10px 17px;
+    text-align: center;
+    text-decoration:black;
+    border: 2px solid black;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: 'Permanent Marker', cursive;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#welcome{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 36px;
+    margin:auto;
+}
+#explore{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 22px;
+}
+.c_poi{
+    border-style: double;
+    border-width: thick;
+}
+.poi_lables{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 16px;
+}
+#poi1{
+
+    width: 300px;
+    position: absolute;
+    top: 300px;
+}
+#poi2{
+
+    width:300px;
+    position: absolute;
+    top: 300px;
+    left: 400px;
+
+}
+#poi3{
+    width: 300px;
+    position: absolute;
+    top: 300px;
+    left: 800px;
+
+}
+#div_pic_1 img{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+#hello_div {
+    top:70px;
+    text-align:center;
+}
+#UserSort
+{
+    width: 10%;
+}
+#map { position:absolute; top:0; bottom:0; width:100%; }
