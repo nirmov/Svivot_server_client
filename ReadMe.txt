@@ -17,4 +17,5 @@ users :    passwords:
 12 b 		b  (admin)
 13 c 		c	
 
-linkToGit: https://github.com/nirmov/Svivot_server_client.git 
+linkToGit ClientSide: https://github.com/nirmov/Svivot_server_client.git 
+linkToGit ServerSide : https://github.com/nirmov/svivot_ServerSide
